@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive Student Registration System using HTML, CSS and JavaScript">
+    <title>Student Registration System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Registration System</h1>
+    <p>Register, edit, and manage student records efficiently</p>
+</header>
+
+<main class="container">
+
+    <!-- Form Section  -->
+    <section class="form-section">
+        <h2>Register Student</h2>
+
+        <form id="studentForm">
+            <input type="hidden" id="editIndex">
+
+            <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" id="name" placeholder="Enter student name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Student ID</label>
+                <input type="text" id="studentId" placeholder="Enter student ID" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" id="email" placeholder="Enter email address" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contact Number</label>
+                <input type="text" id="contact" placeholder="Enter contact number" required>
+            </div>
+
+            <button type="submit">Save Student</button>
+        </form>
+    </section>
+
+    <!-- Display Section  -->
+    <section class="display-section">
+        <h2>Registered Students</h2>
+
+        <div class="table-wrapper" id="tableWrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                    <!-- Records inserted via JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>2026 Student Registration System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
